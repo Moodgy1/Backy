@@ -1,0 +1,548 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2e0cfc;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2e0cfc;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3d1eff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: none; /* Remove the blue background */
+    color: black; /* Set title text color */
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header .cta-button {
+    padding: 15px 30px;
+    background-color: #f2f2f2;
+    color: #2e0cfc;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+header .cta-button:hover {
+    background-color: #3d1eff;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 50px 20px;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Interactive Demo Section */
+#interactive-demo {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.demo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.backpack-view {
+    flex: 1;
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.demo-info {
+    flex: 1;
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Investment Section */
+.investment {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.investment h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2e0cfc;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.investment p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333333;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 1s 0.5s ease-out forwards;
+}
+
+.investment ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s 1s forwards;
+}
+
+.investment ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.investment ul li strong {
+    color: #000000;
+}
+
+.investment .cta-button {
+    padding: 15px 30px;
+    background-color: #f2f2f2;
+    color: #2e0cfc;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    transform: translateY(50px);
+    animation: slideUp 1s 1.5s forwards;
+}
+
+.investment .cta-button:hover {
+    background-color: #3d1eff;
+    color: white;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    color: #2e0cfc;
+    margin-bottom: 20px;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 1s 0.5s ease-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .demo-container {
+        flex-direction: column;
+    }
+
+    .backpack-view, .demo-info {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header .cta-button {
+        font-size: 16px;
+    }
+}
+/* Solar Efficiency Section */
+#solar-efficiency {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#solar-efficiency h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2e0cfc;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+#solar-efficiency p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    animation: slideInFromLeft 1s 0.5s ease-out forwards;
+}
+
+#solar-efficiency h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #2e0cfc;
+    animation: slideInFromLeft 1s 1s ease-out forwards;
+}
+
+/* Solar Panel Efficiency Table */
+#efficiency-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+}
+
+#efficiency-table th, #efficiency-table td {
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#efficiency-table th {
+    background-color: #2e0cfc;
+    color: white;
+    font-weight: bold;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+#efficiency-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#efficiency-table tr:hover {
+    background-color: #f1f1f1;
+}
+#efficiency-table tr {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+#efficiency-table tr:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#efficiency-table tr:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+#efficiency-table tr:nth-child(3) {
+    animation-delay: 2s;
+}
+
+
+/* Charging Simulation */
+#charging-simulation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    animation: fadeIn 1s 2s forwards;
+}
+
+#charging-simulation .charging-item {
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    animation: fadeIn 1s forwards;
+}
+
+#charging-simulation .charging-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#charging-simulation .charging-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #charging-simulation {
+        flex-direction: column;
+    }
+
+    #charging-simulation .charging-item {
+        margin-bottom: 30px;
+    }
+
+    #efficiency-table {
+        width: 100%;
+    }
+}
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h2 {
+    color: #2e0cfc;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.battery-table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+.battery-table th, .battery-table td {
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.battery-table th {
+    background-color: #2e0cfc;
+    color: white;
+    font-weight: bold;
+}
+
+.battery-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.battery-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .battery-table {
+        width: 100%;
+    }
+}
+
+/* Add to app.css */
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Table Rows Fade-In Animation */
+.battery-table tr {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+.battery-table tr:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.battery-table tr:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.battery-table tr:nth-child(3) {
+    animation-delay: 2s;
+}
